@@ -2,6 +2,8 @@
 
 This project is a dynamic Etch-a-Sketch web app where users can interact with a grid of div elements, changing their colors as they hover over them, similar to a traditional Etch-a-Sketch. The grid size can be adjusted by the user with a button, allowing them to generate a new grid of their desired size, while maintaining the same total area.
 
+See the live version here: https://theografiska.github.io/etchASketch/.
+
 ![screenshot of the canvas](screenshot.png)
 
 ## Dynamic Grid Creation
