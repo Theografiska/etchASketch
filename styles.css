@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.div-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cell {
+    width: 6.25vw;
+    height: 6.25vh;
+    flex: 1;
+    display: inline-block;
+    text-align: center;
+    border: solid 1px black;
+}
