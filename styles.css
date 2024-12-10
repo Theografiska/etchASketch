@@ -22,7 +22,8 @@ body {
     flex-wrap: wrap;
     height: 40rem;
     width: 40rem;
-    border: 1px solid black;
+    border: 3rem solid rgb(167, 37, 37);
+    border-radius: 1rem;
     background-color: white;
 }
 
@@ -32,10 +33,15 @@ body {
 }
 
 button {
-    background-color: darkgreen;
+    background-color:limegreen;
     color: white;
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
 
+#clear-button {
+    background-color: gray;
+    margin-left: 1rem;
 }
 
 button:hover {

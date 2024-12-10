@@ -1,6 +1,14 @@
 const divContainer = document.querySelector("#div-container");
 
-let gridSize = 16; // default grid size
+// clear button:
+
+const clearButton = document.querySelector("#clear-button");
+clearButton.addEventListener("click", () => {
+    makeGrid();
+})
+
+
+let gridSize = 33; // default grid size
 let cellOpacity = 0; // "pencil" starts out fully opaque
 
 const makeGrid = () => {
@@ -36,7 +44,7 @@ makeGrid();
 const popUp = document.querySelector("#pop-up");
 
 popUp.addEventListener("click", () => {
-    gridSize = prompt("Choose the number of squares per side. The more, the smaller the 'pencil'. Enter a number from 1-100)", 33);
+    gridSize = prompt("Choose the number of squares per side. Enter a number from 1-100)", 33);
     makeGrid(); // resets the canvas with new "pincel" size
 })
 
