@@ -1,9 +1,11 @@
 const divContainer = document.querySelector("#div-container");
 
 let gridSize = 16; // default grid size
+let cellOpacity = 0; // "pencil" starts out fully opaque
 
 const makeGrid = () => {
     divContainer.innerHTML = ""; // Clear any existing grid
+    cellOpacity = 0; // setting opacity back to 0;
     const totalCells = gridSize * gridSize;
     const cellSize = 100 / gridSize;
 
@@ -16,8 +18,14 @@ const makeGrid = () => {
 
         divContainer.appendChild(cell);
 
+        // random-colored cells; opacity grows with each cell
         cell.addEventListener("mouseover", () => {
-            cell.style.background = "black";
+            let colorValue1 = Math.floor(Math.random() * 256);
+            let colorValue2  = Math.floor(Math.random() * 256);
+            let colorValue3  = Math.floor(Math.random() * 256);
+            cellOpacity += 0.01;
+            cell.style.background = `RGB(${colorValue1} ${colorValue2} ${colorValue3}`;
+            cell.style.opacity = `${cellOpacity}`;
         })
     }
 }
