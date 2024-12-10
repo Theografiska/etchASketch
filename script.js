@@ -36,7 +36,7 @@ makeGrid();
 const popUp = document.querySelector("#pop-up");
 
 popUp.addEventListener("click", () => {
-    gridSize = prompt("Choose the number of squares per side. Enter a number from 1-100)");
+    gridSize = prompt("Choose the number of squares per side. The more, the smaller the 'pencil'. Enter a number from 1-100)", 33);
     makeGrid(); // resets the canvas with new "pincel" size
 })
 
