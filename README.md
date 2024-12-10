@@ -1,17 +1,22 @@
-# Dynamic Grid Generator
+# Etch-a-sketch
 
-This project creates a responsive grid layout using Flexbox, where the number of cells and their size can be dynamically adjusted using JavaScript. Each cell's width and height are calculated based on the grid size.
+This project is a dynamic Etch-a-Sketch web app where users can interact with a grid of div elements, changing their colors as they hover over them, similar to a traditional Etch-a-Sketch. The grid size can be adjusted by the user with a button, allowing them to generate a new grid of their desired size, while maintaining the same total area.
 
 ![screenshot of the canvas](screenshot.png)
 
-## Features
-
-- Dynamic grid size: Adjust the number of cells by changing the `gridSize` variable in the JavaScript file.
-- Responsive layout: The grid adapts to different screen sizes.
-- Flexbox layout: Uses Flexbox to align and position the grid cells within a container.
+## Dynamic Grid Creation
+* JavaScript Grid Generation: The grid is created dynamically using JavaScript. I used a loop to generate 16x16 div elements, each acting as a square in the grid. The div elements are added to a container element within the HTML file.
+* Flexbox Layout: The grid is styled with Flexbox to arrange the divs into a neat, responsive grid. This ensures that the squares are aligned properly without using CSS Grid, which is outside the scope of the current project.
+2. Hover Effect
+* Color Change on Hover: Each grid square changes color when the mouse hovers over it, simulating a drawing effect. This is accomplished by adding an event listener to each square that changes its background color on hover.
+3. Dynamic Grid Resizing
+* Grid Size Input: A button at the top allows the user to input a new grid size, which dynamically generates a new grid. The user is prompted to enter a number for the grid size (up to 100), and the grid is resized accordingly. This ensures the total area of the grid remains constant, preventing the page from becoming unresponsive due to too many squares.
+* JavaScript Implementation: After receiving the input, the current grid is removed, and a new grid is generated using the updated size.
 
 ## Technologies Used
+* HTML5: For basic structure and markup of the page.
+* CSS3: For Flexbox-based layout and responsive styling of the grid squares.
+* JavaScript: To dynamically generate the grid, handle the hover effect, and manage grid resizing.
 
-- **HTML5**: Structure and markup.
-- **CSS3**: Styling and layout using Flexbox.
-- **JavaScript**: Grid generation and dynamic styling.
+## License
+This project is licensed under the MIT License - feel free to use, modify, and distribute as needed.
