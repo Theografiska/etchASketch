@@ -1,4 +1,9 @@
 const divContainer = document.querySelector("#div-container");
+let gridSize = 33; // default grid size
+let cellOpacity = 0; // "pencil" starts out fully opaque
+
+const cells = document.getElementsByClassName("cell");
+
 
 // clear button:
 
@@ -7,9 +12,22 @@ clearButton.addEventListener("click", () => {
     makeGrid();
 })
 
+/*
+// set color (work in progress)
 
-let gridSize = 33; // default grid size
-let cellOpacity = 0; // "pencil" starts out fully opaque
+const blackButton = document.querySelector("#black-button");
+const rainbowButton = document.querySelector("#rainbow-button");
+
+
+blackButton.addEventListener("click", () => {
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseover", () => {
+            cell.style.background = 'black';
+        })
+    })
+});
+
+*/
 
 const makeGrid = () => {
     divContainer.innerHTML = ""; // Clear any existing grid
